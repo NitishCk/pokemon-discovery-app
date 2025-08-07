@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #4a00e0, #8e2de2);
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+  border-bottom: 2px solid #eee;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  color: #333;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav-button.active {
+  background-color: #7e57c2;
+  color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.card-btn {
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card-btn.add {
+  background-color: #4caf50;
+  color: white;
+}
+
+.card-btn.remove {
+  background-color: #f44336;
+  color: white;
+}
+
+.types {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.type {
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.type.fire { background: #f08030; color: white; }
+.type.water { background: #6890f0; color: white; }
+.type.grass { background: #78c850; color: white; }
+.type.electric { background: #f8d030; color: black; }
+.type.psychic { background: #f85888; color: white; }
+.type.dragon { background: #7038f8; color: white; }
+.type.flying { background: #a890f0; color: black; }
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+
+.loading-text {
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .card-btn {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.8rem;
+  }
+
+  .card img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .type {
+    font-size: 0.7rem;
+  }
+}
